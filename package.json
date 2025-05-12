@@ -1,0 +1,26 @@
+{
+  "name": "mywallet-backend",
+  "version": "1.0.0",
+  "description": "Back-end para MyWallet",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js" // Para desenvolvimento
+    "test": "jest"// Se usar Jest para testes
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "joi": "^17.12.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0", // se usar Jest
+    "nodemon": "^3.1.0"  // Se usar Nodemon para desenvolvimento
+  },
+  "engines": {
+    "node": ">=18" // ou a versão do node que você usar
+  }
+}
