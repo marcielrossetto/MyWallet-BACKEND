@@ -17,7 +17,7 @@ app.get('/', (req,res)=>{
 
 app.use((err, req, res, next)=>{
     console.error(err.stack);
-    res.status(500).send('Erro interno do Servido');
+    res.status(500).send('Erro interno do Servidor');
 });
 
 app.listen(port, () =>{
