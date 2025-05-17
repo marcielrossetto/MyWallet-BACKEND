@@ -1,9 +1,9 @@
-import joi from "joi";
+import Joi from 'joi';
 
-const transactionSchema = joi.object({
-  amount: joi.number().positive().required(),
-  description: joi.string().trim().required(),
-  type: joi.string().trim().valid("entrada", "saída").required(),
+const transactionSchema = Joi.object({
+  value: Joi.number().positive().required(),
+  description: Joi.string().required(),
+  type: Joi.string().valid('deposit', 'withdraw').required()
 });
 
 export default transactionSchema;
