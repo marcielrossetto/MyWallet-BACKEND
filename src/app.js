@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use(authRouter);
+app.use(authRouter); // Sem prefixo
 app.use(transactionRouter);
 
 export default app;
