@@ -5,11 +5,12 @@ const app = express();
 
 app.use(cors({
   origin: 'https://marcielrossetto.github.io',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
+  methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
 
-// outras configurações e rotas aqui...
+app.use(express.json()); // importante para ler o body JSON
+
+// suas rotas aqui
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
