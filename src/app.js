@@ -7,10 +7,13 @@ import transactionRouter from './routers/transactionRouter.js';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://marcielrossetto.github.io',
+  methods: ['GET', 'POST', 'PUT', 'DELETE']
+}));
 app.use(express.json());
 
-app.use(authRouter); // Sem prefixo
+app.use(authRouter);
 app.use(transactionRouter);
 
 export default app;
