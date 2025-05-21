@@ -28,8 +28,6 @@ export async function getTransactions(req, res) {
     const transactions = await db.collection('transactions')
       .find({ userId })
       .sort({ date: -1 })
-      .skip((page - 1) * 10)
-      .limit(10)
       .toArray();
     res.send(transactions);
   } catch (err) {
